@@ -2,7 +2,9 @@
    CV en ligne – feuille de style principale
    ========================================================= */
 
-/* ---------- 1. Police Raleway importée avec @font-face ---------- */
+/* =========================================================
+   1. Police Raleway importée avec @font-face
+   ========================================================= */
 @font-face {
     font-family: "Raleway";
     src: url("../fonts/raleway-latin-400-normal.woff2") format("woff2");
@@ -35,18 +37,25 @@
     font-display: swap;
 }
 
-/* ---------- 2. Palette de couleurs ---------- */
+/* =========================================================
+   2. Palette de couleurs
+   ========================================================= */
 :root {
     --turquoise: #17abb3;
     --texte: #333333;
     --gris-trait: #e3e3e3;
     --gris-fond: #f5f5f5;
     --blanc: #ffffff;
-    --gris-colonne: #eef1f2; /* relevé sur la maquette */
+    /* =========================================================
+       Couleur exacte de la colonne gauche sur la maquette
+       ========================================================= */
+    --gris-colonne: #eef1f2;
 }
 
-/* ---------- 3. Base ---------- */
-/* Les marges internes et bordures sont comprises dans les largeurs et hauteurs */
+/* =========================================================
+   3. Base
+   Les marges internes et bordures sont comprises dans les largeurs et hauteurs
+   ========================================================= */
 *,
 *::before,
 *::after {
@@ -58,7 +67,10 @@ body {
     background-color: var(--gris-fond);
     color: var(--texte);
     font-family: "Raleway", Arial, sans-serif;
-    font-size: 1rem; /* suit la taille choisie dans le navigateur */
+    /* =========================================================
+       Suit la taille choisie dans le navigateur
+       ========================================================= */
+    font-size: 1rem;
     line-height: 1.2;
 }
 
@@ -84,14 +96,18 @@ a {
     text-decoration: none;
 }
 
-/* ---------- 4. Conteneur du CV : 1160px, centré ---------- */
+/* =========================================================
+   4. Conteneur du CV : 1160px, centré
+   ========================================================= */
 .cv {
     width: 1160px;
     margin: 0 auto;
     background-color: var(--blanc);
 }
 
-/* ---------- 5. En-tête ---------- */
+/* =========================================================
+   5. En-tête
+   ========================================================= */
 .entete {
     display: flex;
     align-items: center;
@@ -103,7 +119,10 @@ a {
 .entete-photo {
     display: flex;
     justify-content: center;
-    width: 348px; /* même largeur que la colonne de gauche */
+    /* =========================================================
+       Même largeur que la colonne de gauche
+       ========================================================= */
+    width: 348px;
 }
 
 .lien-photo {
@@ -168,12 +187,16 @@ a {
     margin-right: 9px;
 }
 
-/* ---------- 6. Contenu : deux colonnes ---------- */
+/* =========================================================
+   6. Contenu : deux colonnes
+   ========================================================= */
 .contenu {
     display: flex;
 }
 
-/* Titres des rubriques */
+/* =========================================================
+   Titres des rubriques
+   ========================================================= */
 .contenu h2 {
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -187,7 +210,9 @@ a {
     margin-bottom: 25px;
 }
 
-/* ---------- 7. Colonne de gauche ---------- */
+/* =========================================================
+   7. Colonne de gauche
+   ========================================================= */
 .colonne-gauche {
     width: 348px;
     padding: 50px 50px 30px;
@@ -220,11 +245,13 @@ a {
     height: 16px;
 }
 
-/* Listes à puces carrées turquoise */
+/* =========================================================
+   Listes à puces carrées turquoise
+   ========================================================= */
 .liste-puces {
     padding-left: 22px;
     list-style: square;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .liste-puces li {
@@ -235,19 +262,25 @@ a {
     color: var(--turquoise);
 }
 
-/* ---------- 8. Colonne de droite ---------- */
+/* =========================================================
+   8. Colonne de droite
+   ========================================================= */
 .colonne-droite {
     flex: 1;
     padding: 50px 50px 40px;
 }
 
-/* Texte du profil : première ligne indentée et texte justifié */
+/* =========================================================
+   Texte du profil : première ligne indentée et texte justifié
+   ========================================================= */
 .profil p {
     text-align: justify;
     text-indent: 1.5em;
 }
 
-/* Formations, stages, expériences */
+/* =========================================================
+   Formations, stages, expériences
+   ========================================================= */
 .parcours li {
     display: flex;
     justify-content: space-between;
@@ -269,7 +302,9 @@ a {
     color: var(--turquoise);
 }
 
-/* ---------- 9. Pied de page ---------- */
+/* =========================================================
+   9. Pied de page
+   ========================================================= */
 .pied {
     display: flex;
     flex-direction: column;
@@ -300,26 +335,34 @@ a {
     font-style: italic;
 }
 
-/* ---------- 10. Effets de survol ---------- */
+/* =========================================================
+   10. Effets de survol
+   ========================================================= */
 
-/* Effet n° 1 : trait vertical turquoise à gauche et fond gris au survol */
+/* =========================================================
+   Effet n° 1 : trait vertical turquoise à gauche et fond gris au survol
+   ========================================================= */
 .parcours li {
     border-left: 0 solid var(--turquoise);
     transition: background-color 0.2s, padding 0.2s;
 }
 
 .parcours li:hover {
-    padding: 18px 18px 18px 20px;
+    padding: 10px;
     border-left-width: 5px;
     background-color: var(--gris-trait);
 }
 
-/* Effet n° 2 : le pointeur indique que l'on peut zoomer sur la photo */
+/* =========================================================
+   Effet n° 2 : le pointeur indique que l'on peut zoomer sur la photo
+   ========================================================= */
 .lien-photo {
     cursor: zoom-in;
 }
 
-/* Effet n° 3 : l'opacité baisse légèrement au survol des réseaux sociaux */
+/* =========================================================
+   Effet n° 3 : l'opacité baisse légèrement au survol des réseaux sociaux
+   ========================================================= */
 .reseaux a {
     transition: opacity 0.2s;
 }
