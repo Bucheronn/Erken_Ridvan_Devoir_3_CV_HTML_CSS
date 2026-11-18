@@ -83,3 +83,219 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+/* ---------- 4. Conteneur du CV : 1160px, centré ---------- */
+.cv {
+    width: 1160px;
+    margin: 0 auto;
+    background-color: var(--blanc);
+}
+
+/* ---------- 5. En-tête ---------- */
+.entete {
+    display: flex;
+    align-items: center;
+    height: 240px;
+    background-color: var(--turquoise);
+    color: var(--blanc);
+}
+
+.entete-photo {
+    display: flex;
+    justify-content: center;
+    width: 348px; /* même largeur que la colonne de gauche */
+}
+
+.lien-photo {
+    display: block;
+}
+
+.photo-profil {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--blanc);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.entete-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.entete h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.poste {
+    margin-top: 4px;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 245px;
+    margin-top: 22px;
+    font-size: 1.05rem;
+}
+
+.contacts li {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 9px;
+}
+
+.contacts li:nth-child(even) {
+    width: 40%;
+}
+
+.contacts a {
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+}
+
+/* ---------- 6. Contenu : deux colonnes ---------- */
+.contenu {
+    display: flex;
+}
+
+/* Titres des rubriques */
+.contenu h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gris-trait);
+    color: var(--turquoise);
+    font-size: 1.55rem;
+    font-weight: 400;
+}
+
+.contenu section {
+    margin-bottom: 25px;
+}
+
+/* ---------- 7. Colonne de gauche ---------- */
+.colonne-gauche {
+    width: 348px;
+    padding: 50px 50px 30px;
+    background-color: var(--gris-colonne);
+}
+
+.colonne-gauche section {
+    margin-bottom: 32px;
+}
+
+.liste-niveaux li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.libelle {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.etoiles {
+    display: flex;
+    gap: 3px;
+}
+
+.etoiles img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Listes à puces carrées turquoise */
+.liste-puces {
+    padding-left: 22px;
+    list-style: square;
+    font-size: 1.1rem;
+}
+
+.liste-puces li {
+    margin-bottom: 4px;
+}
+
+.liste-puces li::marker {
+    color: var(--turquoise);
+}
+
+/* ---------- 8. Colonne de droite ---------- */
+.colonne-droite {
+    flex: 1;
+    padding: 50px 50px 40px;
+}
+
+/* Texte du profil : première ligne indentée et texte justifié */
+.profil p {
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
+/* Formations, stages, expériences */
+.parcours li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.parcours h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lieu {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.date {
+    color: var(--turquoise);
+}
+
+/* ---------- 9. Pied de page ---------- */
+.pied {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 12px;
+    background-color: var(--turquoise);
+    color: var(--blanc);
+}
+
+.reseaux {
+    display: flex;
+    gap: 22px;
+}
+
+.reseaux a {
+    display: block;
+}
+
+.reseaux img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.mise-a-jour {
+    margin-top: 14px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
