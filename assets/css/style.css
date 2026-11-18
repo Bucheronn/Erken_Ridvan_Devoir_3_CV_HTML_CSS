@@ -299,3 +299,31 @@ a {
     font-size: 0.75rem;
     font-style: italic;
 }
+
+/* ---------- 10. Effets de survol ---------- */
+
+/* Effet n° 1 : trait vertical turquoise à gauche et fond gris au survol */
+.parcours li {
+    border-left: 0 solid var(--turquoise);
+    transition: background-color 0.2s, padding 0.2s;
+}
+
+.parcours li:hover {
+    padding: 18px 18px 18px 20px;
+    border-left-width: 5px;
+    background-color: var(--gris-trait);
+}
+
+/* Effet n° 2 : le pointeur indique que l'on peut zoomer sur la photo */
+.lien-photo {
+    cursor: zoom-in;
+}
+
+/* Effet n° 3 : l'opacité baisse légèrement au survol des réseaux sociaux */
+.reseaux a {
+    transition: opacity 0.2s;
+}
+
+.reseaux a:hover {
+    opacity: 0.7;
+}
